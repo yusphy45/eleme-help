@@ -1,0 +1,23 @@
+{
+  "name": "eleme-help",
+  "version": "0.0.0",
+  "description": "文案管理",
+  "main": "bin/www",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "帮助中心"
+  ],
+  "authors": [
+    "eleme"
+  ],
+  "license": "MIT",
+  "homepage": "app.js",
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "jquery": "~2.1.4",
+    "EpicEditor": "~0.2.3",
+    "sweetalert": "~1.0.1"
+  }
+}

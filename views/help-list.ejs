@@ -1,0 +1,23 @@
+<ul class="navbar navbar-default navbar-fixed-top eleme-help-class ">
+    <li><a href="/help/v-question">全部</a></li>
+    <li><a href="/help/v-question?class=payment">订餐支付</a></li>
+    <li><a href="/help/v-question?class=hasten">催单配送</a></li>
+    <li><a href="/help/v-question?class=afterSales">退单退款</a></li>
+    <li><a href="/help/v-question?class=rule">网站规则</a></li>
+    <li><a href="/help/v-question?class=vip">饿配送会员</a></li>
+</ul>
+<a class="row eleme-help-add" href="/help/v-questionadd">新增 <span class="glyphicon glyphicon-plus"></span> </a>
+<ul class="eleme-help-list row">
+    <% content.forEach(function(item,index){ %>
+    <li class="row eleme-help-item">
+        <a class="col-xs-11" href="/help/v-questionupdate/<%- item._id%>">
+            <%- item.question %>
+        </a>
+        <span class="eleme-help-remove" title="删除" data-value="<%- item._id%>"><span class="glyphicon glyphicon-trash"></span></span>
+        <div class="col-xs-11 eleme-help-answer">
+            <%- item.answer %>
+        </div>
+    </li>
+    <% }) %>
+</ul>
+<script src="/public/javascripts/ele.me.list.js"></script>

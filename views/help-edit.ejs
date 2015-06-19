@@ -1,0 +1,42 @@
+<div class="page-header">
+    <h1>编辑QA</h1>
+</div>
+<form class="row" id="helpAdd">
+    <div class="form-group col-xs-6">
+        <label for="level-1-class">一级分类:</label>
+        <select class="form-control" id="level-1-class" name="levelTopClass" data-value="<%- content.levelTopClass%>">
+            <option value="payment">订餐支付</option>
+            <option value="hasten">催单配送</option>
+            <option value="afterSales">退单退款</option>
+            <option value="rule">网站规则</option>
+            <option value="vip">饿配送会员</option>
+        </select>
+    </div>
+    <div class="form-group col-xs-6">
+        <label for="level-2-class">二级分类:</label>
+        <select class="form-control" id="level-2-class" name="levelSecondClass" data-value="<%- content.levelSecondClass%>">
+            <option value="default">无</option>
+            <option value="online">在线支付</option>
+            <option value="balances">余额支付</option>
+            <option value="redPacket">红包问题</option>
+            <option value="orderFood">订餐问题</option>
+            <option value="verify">手机验证</option>
+        </select>
+    </div>
+    <div class="form-group col-xs-12">
+        <label for="question-content">问题描述:</label>
+        <input class="form-control" type="text" id="question-content" name="question" placeholder="问题描述" value="<%- content.question%>">
+    </div>
+    <div id="epiceditor" class="col-xs-12"></div>
+    <input type="hidden" value="<%- content.answer%>" id="answerContent">
+    <input type="hidden" value="<%- content._id%>" name="_id" id="idContent">
+    <div class="checkbox col-xs-12">
+        <label>
+            <input type="checkbox" name="hot" id="hot" data-value="<%- content.hot%>">热门
+        </label>
+    </div>
+    <div class="col-xs-12">
+        <button class="btn btn-default" type="button" id="btn">保存</button>
+    </div>
+</form>
+<script src="/public/javascripts/ele.me.edit.js"></script>
